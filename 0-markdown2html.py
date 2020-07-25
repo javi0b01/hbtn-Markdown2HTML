@@ -1,9 +1,4 @@
 #!/usr/bin/python3
-"""
-Script that takes an argument 2 strings
-First argument is the name of the Markdown file
-Second argument is the output file name
-"""
 import sys
 import os.path
 if __name__ == "__main__":
@@ -15,4 +10,3 @@ if __name__ == "__main__":
     if (check is False):
         print("Missing <filename>")
         exit(1)
-
