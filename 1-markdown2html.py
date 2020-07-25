@@ -20,6 +20,6 @@ if __name__ == "__main__":
             tag_open = ("<h{}>".format(amount))
             tag_close = ("</h{}>".format(amount))
             sp = line.find(" ")
-            tag_content = line[sp: -1]
+            tag_content = line[sp+1: -1]
             html_line = ("{}{}{}\n".format(tag_open, tag_content, tag_close))
             d.write(html_line)
