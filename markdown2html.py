@@ -19,7 +19,7 @@ if __name__ == "__main__":
     destination = argv[2]
     with open(origin, "r") as o:
         lines = o.readlines()
-    with open(destination, "x") as d:
+    with open(destination, "w") as d:
         for line in lines:
             amount = line.count("#")
             tag_open = ("<h{}>".format(amount))
