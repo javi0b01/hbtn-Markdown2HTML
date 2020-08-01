@@ -6,6 +6,7 @@ It’s time to code a Markdown to HTML!
 """
 import sys
 import os.path
+
 if __name__ == "__main__":
     size = len(sys.argv)
     if size < 3:
