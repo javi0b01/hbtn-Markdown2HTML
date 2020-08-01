@@ -19,7 +19,7 @@ if __name__ == "__main__":
     destination = argv[2]
     with open(origin, "r") as o:
         lines = o.readlines()
-    with open(destination, "w") as d:
+        html_lines = []
         for line in lines:
             amount = line.count("#")
             tag_open = ("<h{}>".format(amount))
@@ -27,6 +27,8 @@ if __name__ == "__main__":
             sp = line.find(" ")
             tag_content = line[sp+1: -1]
             html_line = ("{}{}{}\n".format(tag_open, tag_content, tag_close))
-            d.write(html_line)
+            html_lines.append(html_line)
+    with open(destination, "w") as d:
+        d.writelines(html_lines)
     exit(0)
 
