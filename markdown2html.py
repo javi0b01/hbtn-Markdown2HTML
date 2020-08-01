@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Markdown is awesome! All your README.md are made in Markdown,
+but do you know how Github are rendering them?
+It’s time to code a Markdown to HTML!
+"""
 import sys
 import os.path
 if __name__ == "__main__":
@@ -10,3 +15,4 @@ if __name__ == "__main__":
     if (check is False):
         print("Missing <filename>")
         exit(1)
+
