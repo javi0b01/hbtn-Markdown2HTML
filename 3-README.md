@@ -1,4 +1,0 @@
-# My title
-* Hello
-* Bye
-
