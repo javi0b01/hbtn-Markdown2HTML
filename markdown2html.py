@@ -17,9 +17,9 @@ if __name__ == "__main__":
         exit(1)
     origin = argv[1]
     destination = argv[2]
+    html_lines = []
     with open(origin, 'r') as o:
         lines = o.readlines()
-        html_lines = []
         for line in lines:
             _list = line.split()
             _fchar = _list[0]
