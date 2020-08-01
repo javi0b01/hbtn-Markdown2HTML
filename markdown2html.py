@@ -6,7 +6,6 @@ It’s time to code a Markdown to HTML!
 """
 import sys
 import os.path
-
 if __name__ == "__main__":
     size = len(sys.argv)
     if size < 3:
@@ -16,4 +15,5 @@ if __name__ == "__main__":
     if (check is False):
         sys.stderr.write("Missing {}\n".format(sys.argv[1]))
         sys.exit(1)
+    sys.exit(0)
 
