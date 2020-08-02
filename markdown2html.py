@@ -18,7 +18,6 @@ if __name__ == "__main__":
     with open(argv[1], 'r') as md:
         mdlines = md.readlines()
         _lines = []
-        li = False
         ul = 0
         for line in mdlines:
             _list = line.split(' ')
@@ -28,14 +27,12 @@ if __name__ == "__main__":
                 _lines.append('<h{0}>{1}</h{0}>\n'.
                               format(len(_fchar), _ochars))
             if _fchar[0] == '-':
-                li = True
                 ul += 1
                 if ul == 1:
                     _lines.append('<ul>\n')
                 _lines.append('<li>{}</li>\n'.format(_ochars))
-            if _fchar[0] != '-' and ul > 0 and li == True:
+            if ul > 0 and _fchar[0] != '-':
                 _lines.append('</ul>\n')
-                li = False
     with open(argv[2], 'w') as html:
         html.writelines(_lines)
     exit(0)
