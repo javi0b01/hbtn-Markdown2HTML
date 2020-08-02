@@ -31,8 +31,9 @@ if __name__ == "__main__":
                 if ul == 1:
                     _lines.append('<ul>\n')
                 _lines.append('<li>{}</li>\n'.format(_ochars))
-            if (ul > 1 and _fchar[0] != '-') or (ul > 1 and line == mdlines[-1]):
-                _lines.append('</ul>\n')
+            if ul >= 1:
+                 if line == mdlines[-1]:
+                    _lines.append('</ul>\n')
     with open(argv[2], 'w') as html:
         html.writelines(_lines)
     exit(0)
