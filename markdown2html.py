@@ -29,7 +29,7 @@ if __name__ == "__main__":
             if _fchar[0] == '-':
                 ul += 1
                 if ul == 1:
-                    _lines.append('<ul>\n<li>{}</li>\n'.format(_ochars))
+                    _lines.append('<ul>\n')
                 _lines.append('<li>{}</li>\n'.format(_ochars))
             if _fchar[0] != '-' and ul > 0:
                 _lines.append('</ul>\n')
