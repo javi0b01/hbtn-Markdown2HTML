@@ -15,10 +15,8 @@ if __name__ == "__main__":
     if (check is False):
         print("Missing {}".format(argv[1]), file=stderr)
         exit(1)
-    origin = argv[1]
-    destination = argv[2]
     html_lines = []
-    with open(origin, 'r') as o:
+    with open(argv[1], 'r') as o:
         lines = o.readlines()
         for line in lines:
             _list = line.split()
@@ -27,7 +25,7 @@ if __name__ == "__main__":
             if _fchar[0] == '#':
                 _hlevel = len(_fchar)
                 html_lines.append('<h{0}>{1}</h{0}>\n'.format(_hlevel, _ochars))
-    with open(destination, 'w') as d:
+    with open(argv[2], 'w') as d:
         d.writelines(html_lines)
     exit(0)
 
