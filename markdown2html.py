@@ -19,9 +19,9 @@ if __name__ == "__main__":
         mdlines = md.readlines()
         _lines = []
         for line in mdlines:
-            _list = line.split()
+            _list = line.split(' ')
             _fchar = _list[0]
-            _ochars = ' '.join(_list[1:])
+            _ochars = ' '.join(_list[1:]).replace('\n', '')
             if _fchar[0] == '#':
                 _lines.append('<h{0}>{1}</h{0}>\n'.
                               format(len(_fchar), _ochars))
