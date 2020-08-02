@@ -33,6 +33,8 @@ if __name__ == "__main__":
                 _lines.append('<li>{}</li>\n'.format(_ochars))
             if _fchar[0] != '-' and ul > 0:
                 _lines.append('</ul>\n')
+            if _fchar[0] == '\n':
+                _lines.append('')
     with open(argv[2], 'w') as html:
         html.writelines(_lines)
     exit(0)
