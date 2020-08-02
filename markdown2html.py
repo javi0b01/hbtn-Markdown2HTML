@@ -26,13 +26,15 @@ if __name__ == "__main__":
             if _fchar[0] == '#':
                 _lines.append('<h{0}>{1}</h{0}>\n'.
                               format(len(_fchar), _ochars))
-            if _fchar[0] == '-':
+            elif _fchar[0] == '-':
                 ul += 1
                 if ul == 1:
                     _lines.append('<ul>\n')
                 _lines.append('<li>{}</li>\n'.format(_ochars))
-            if ul > 0 and _fchar[0] != '-':
+            elif ul > 0 and _fchar[0] != '-':
                 _lines.append('</ul>\n')
+            else:
+                _lines.append(line)
     with open(argv[2], 'w') as html:
         html.writelines(_lines)
     exit(0)
