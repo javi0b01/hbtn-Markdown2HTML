@@ -23,8 +23,8 @@ if __name__ == "__main__":
             _fchar = _list[0]
             _ochars = ' '.join(_list[1:])
             if _fchar[0] == '#':
-                _hlevel = len(_fchar)
-                _lines.append('<h{0}>{1}</h{0}>\n'.format(_hlevel, _ochars))
+                _lines.append('<h{0}>{1}</h{0}>\n'.
+                              format(len(_fchar), _ochars))
     with open(argv[2], 'w') as html:
         html.writelines(_lines)
     exit(0)
